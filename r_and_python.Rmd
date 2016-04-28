@@ -9,8 +9,7 @@ output:
 ---
 
 ##
-<div style="font-size: 65px; font-weight: 600; color: #595959; margin-left: 60px;">
-<br/><br/><br/><br/>
+<div style="position: absolute; top: 450px; left: 120px; font-size: 65px; font-weight: 600; color: #595959; letter-spacing: -3px;">
 R and Python and Stan and You
 </div>
 
@@ -64,9 +63,9 @@ Google Scholar citations 2015 -- present
 </div>
 <center>
 ```{r, echo=FALSE}
-s = read.table("scholar", sep=",", comment.char="#", header=TRUE)
-s = s[order(s[,3], decreasing=TRUE), ]
-barplot(s[,3], names=s$lang, col=colorRampPalette(c("blue", "green", "yellow", "red"))(5))
+s = data.frame(lang=c("R", "SAS", "MATLAB", "Python"), results=c(17900, 18800, 17200, 15000))
+s = s[order(s$results, decreasing=TRUE), ]
+barplot(s$results, names=s$lang, col=colorRampPalette(c("blue", "green", "yellow", "red"))(5))
 ```
 </center>
 <div style="font-face: Sans-serif; font-size: 14pt; color: black;">
@@ -113,7 +112,7 @@ State-of-the-art IRL methods availablility:
 ##
 <div style="font-face: Sans-serif; font-size: 36pt; color: black;">
 <br/><br/><br/>
-Equally state-of-the-art Martinsson, Rokhlin, Tygert methods not yet in R (AFAIK)
+But, equally state-of-the-art Martinsson, Rokhlin, Tygert methods not yet in R (AFAIK)
 </div>
 
 ##
@@ -137,23 +136,18 @@ http://research.microsoft.com/en-us/um/redmond/projects/MSCompBio/Fastlmm/
 Cooler conferences
 </div>
 
-##
-<div style="font-face: Sans-serif; font-size: 36pt; color: black;">
-<br/><br/><br/>
-2016 NYR Conference
-</div>
-- Many R talks
-- 3 Stan talks
-- 2 Python/R talks
-- 1 Julia talk
 
 ##
-<div style="font-face: Sans-serif; font-size: 36pt; color: black;">
-<br/><br/><br/>
-Open Data Science Conference
+
+<center>
+<img src="nyr.png" alt=""></img>
 <br/><br/>
-Strange Loop
-</div>
+<img src="strangeloop.png" alt=""></img>
+<br/><br/>
+<img src="odsc.png" alt=""></img>
+</center>
+
+
 
 ##
 <div style="font-face: Sans-serif; font-size: 36pt; color: black;">
@@ -203,13 +197,13 @@ Appendix
 <div style="font-face: Sans-serif; font-size: 12pt; color: black; overflow-x: auto;">
 Google Scholar and arXiv searches, conducted on 28 April, 2016
 <br/>
-https://scholar.google.com/scholar?as_ylo=2016&q=%22r-project.org%22+(%22statistical+analysis%22+OR+%22t+test%22+OR++%22regression+analysis%22+OR+%22quantitative+analysis%22+OR++%22data+analytics%22+OR+%22machine+learning%22+OR++%22artificial+intelligence%22+OR+%22analysis+of+variance%22+OR++%22anova%22+OR+%22chi+square%22+OR+%22data+mining%22)&hl=en&as_sdt=1,48
+https://scholar.google.com/scholar?q=%22matlab%22+%28%22statistical+analysis%22+OR+%22t+test%22+OR++%22regression+analysis%22+OR+%22quantitative+analysis%22+OR++%22data+analytics%22+OR+%22machine+learning%22+OR++%22artificial+intelligence%22+OR+%22analysis+of+variance%22+OR++%22anova%22+OR+%22chi+square%22+OR+%22data+mining%22%29&btnG=&hl=en&as_sdt=1%2C48&as_ylo=2015
 <br/>
-https://scholar.google.com/scholar?as_ylo=2016&q=%22sas+institute%22+(%22statistical+analysis%22+OR+%22t+test%22+OR++%22regression+analysis%22+OR+%22quantitative+analysis%22+OR++%22data+analytics%22+OR+%22machine+learning%22+OR++%22artificial+intelligence%22+OR+%22analysis+of+variance%22+OR++%22anova%22+OR+%22chi+square%22+OR+%22data+mining%22)&hl=en&as_sdt=1,48
+https://scholar.google.com/scholar?q=%22sas+institute%22+%28%22statistical+analysis%22+OR+%22t+test%22+OR++%22regression+analysis%22+OR+%22quantitative+analysis%22+OR++%22data+analytics%22+OR+%22machine+learning%22+OR++%22artificial+intelligence%22+OR+%22analysis+of+variance%22+OR++%22anova%22+OR+%22chi+square%22+OR+%22data+mining%22%29&btnG=&hl=en&as_sdt=1%2C48&as_ylo=2015
 <br/>
-https://scholar.google.com/scholar?as_ylo=2016&q=%22matlab%22+(%22statistical+analysis%22+OR+%22t+test%22+OR++%22regression+analysis%22+OR+%22quantitative+analysis%22+OR++%22data+analytics%22+OR+%22machine+learning%22+OR++%22artificial+intelligence%22+OR+%22analysis+of+variance%22+OR++%22anova%22+OR+%22chi+square%22+OR+%22data+mining%22)&hl=en&as_sdt=1,48
+https://scholar.google.com/scholar?as_ylo=2015&q=%22r-project.org%22+(%22statistical+analysis%22+OR+%22t+test%22+OR++%22regression+analysis%22+OR+%22quantitative+analysis%22+OR++%22data+analytics%22+OR+%22machine+learning%22+OR++%22artificial+intelligence%22+OR+%22analysis+of+variance%22+OR++%22anova%22+OR+%22chi+square%22+OR+%22data+mining%22)&hl=en&as_sdt=1,48
 <br/>
-https://scholar.google.com/scholar?as_ylo=2016&q=%22python%22+-snake+(%22statistical+analysis%22+OR+%22t+test%22+OR++%22regression+analysis%22+OR+%22quantitative+analysis%22+OR++%22data+analytics%22+OR+%22machine+learning%22+OR++%22artificial+intelligence%22+OR+%22analysis+of+variance%22+OR++%22anova%22+OR+%22chi+square%22+OR+%22data+mining%22)&hl=en&as_sdt=1,48
+https://scholar.google.com/scholar?as_ylo=2015&q=%22python%22+-snake+(%22statistical+analysis%22+OR+%22t+test%22+OR++%22regression+analysis%22+OR+%22quantitative+analysis%22+OR++%22data+analytics%22+OR+%22machine+learning%22+OR++%22artificial+intelligence%22+OR+%22analysis+of+variance%22+OR++%22anova%22+OR+%22chi+square%22+OR+%22data+mining%22)&hl=en&as_sdt=1,48
 <pre>
 arXiv.org full text search all articles
 "MATLAB"  273
